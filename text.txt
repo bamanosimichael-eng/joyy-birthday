@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Card</title>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffe5ec,
+    #ffe5ec 40px,
+    #fff 40px,
+    #fff 80px
+  );
+  text-align:center;
+  padding:40px;
+}
+.card{
+  max-width:500px;
+  margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+button{
+  padding:12px 24px;
+  margin:10px;
+  border:none;
+  border-radius:25px;
+  font-size:16px;
+}
+.yes{background:#ff4d6d;color:white;}
+.no{background:#ccc;}
+.hidden{display:none;}
+</style>
+</head>
+<body>
+
+<div class="card" id="p1">
+  <h1>Hey Joyy💕</h1>
+  <button class="yes" onclick="go2()">Continue</button>
+</div>
+
+<div class="card hidden" id="p2">
+  <h2>Do you want to see your husband’s message? 💌</h2>
+  <button class="yes" onclick="go3()">Yes</button>
+  <button class="no" onclick="alert('You have to say yes 😄')">No</button>
+</div>
+
+<div class="card hidden" id="p3">
+  <p>
+    Happy birthday my wifeee💕<br>
+    I love love love youu❤️<br>
+    Enjoy your dayy❤️<br>
+    andd yeaaa I’m going to marryyy youuu🌚❤️
+  </p>
+</div>
+
+<script>
+function go2(){p1.classList.add('hidden');p2.classList.remove('hidden')}
+function go3(){p2.classList.add('hidden');p3.classList.remove('hidden')}
+</script>
+
+</body>
+</html>
